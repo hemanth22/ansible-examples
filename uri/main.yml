@@ -1,0 +1,8 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+   - name: "wait for httpbin to come up"
+     uri:
+       url: "http://neverssl.com"
+       status_code: 200
